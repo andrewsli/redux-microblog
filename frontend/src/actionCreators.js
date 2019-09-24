@@ -48,7 +48,7 @@ function wrapTryCatch(fn) {
 // titles to redux state
 export function getTitlesFromAPI() {
   return wrapWithSpinner(wrapTryCatch(async function (dispatch) {
-    let res = await axios.get(`${BASE_URL}posts`);
+    let res = await axios.get(`${BASE_URL}/posts`);
 
     dispatch(getTitles(res.data));
   }));
@@ -63,7 +63,7 @@ export function getTitlesFromAPI() {
 // to redux state
 export function getPostFromAPI(id) {
   return wrapWithSpinner(wrapTryCatch(async function (dispatch) {
-    let res = await axios.get(`${BASE_URL}posts/${id}`);
+    let res = await axios.get(`${BASE_URL}/posts/${id}`);
 
     if (!res.data) {
       throw new Error("Post not found");
@@ -78,7 +78,7 @@ export function getPostFromAPI(id) {
 // to redux state
 export function addPostFromAPI(postDetails) {
   return wrapWithSpinner(wrapTryCatch(async function (dispatch) {
-    let res = await axios.post(`${BASE_URL}posts/`, postDetails);
+    let res = await axios.post(`${BASE_URL}/posts/`, postDetails);
 
     dispatch(addPost(res.data));
   }));
@@ -89,7 +89,7 @@ export function addPostFromAPI(postDetails) {
 // tinredux state
 export function editPostFromAPI(id, postDetails) {
   return wrapWithSpinner(wrapTryCatch(async function (dispatch) {
-    let res = await axios.put(`${BASE_URL}posts/${id}`, postDetails);
+    let res = await axios.put(`${BASE_URL}/posts/${id}`, postDetails);
 
     dispatch(editPost(res.data));
   }));
@@ -100,7 +100,7 @@ export function editPostFromAPI(id, postDetails) {
 // from redux state
 export function deletePostFromAPI(id) {
   return wrapWithSpinner(wrapTryCatch(async function (dispatch) {
-    await axios.delete(`${BASE_URL}posts/${id}`);
+    await axios.delete(`${BASE_URL}/posts/${id}`);
 
     dispatch(deletePost(id));
   }));
@@ -116,7 +116,7 @@ export function deletePostFromAPI(id) {
 // to redux state
 export function addCommentFromAPI(postId, comment) {
   return wrapTryCatch(async function (dispatch) {
-    let res = await axios.post(`${BASE_URL}posts/${postId}/comments`, { text: comment });
+    let res = await axios.post(`${BASE_URL}/posts/${postId}/comments`, { text: comment });
 
     dispatch(addComment(postId, res.data))
   });
@@ -127,7 +127,7 @@ export function addCommentFromAPI(postId, comment) {
 // from redux state
 export function deleteCommentFromAPI(postId, commentId) {
   return wrapTryCatch(async function (dispatch) {
-    await axios.delete(`${BASE_URL}posts/${postId}/comments/${commentId}`);
+    await axios.delete(`${BASE_URL}/posts/${postId}/comments/${commentId}`);
 
     dispatch(deleteComment(postId, commentId));
   });
@@ -138,7 +138,7 @@ export function deleteCommentFromAPI(postId, commentId) {
 // in redux state
 export function makeVoteFromAPI(id, vote) {
   return wrapTryCatch(async function (dispatch) {
-    let res = await axios.post(`${BASE_URL}posts/${id}/vote/${vote}`);
+    let res = await axios.post(`${BASE_URL}/posts/${id}/vote/${vote}`);
 
     dispatch(makeVote(id, res.data.votes));
   })
