@@ -4,7 +4,13 @@ A blogging app that includes basic blogging functionalities such as adding, edit
 
 Collaborated with @cyhk
 
-## Getting started
+## Deployed version
+
+frontend: https://redux-microblog.herokuapp.com/
+
+backend: http://redux-microblog-backend.herokuapp.com/
+
+## Getting started locally
 
 1. Clone this repo to your local machine 
 ```
