@@ -2,7 +2,7 @@
 
 A blogging app that includes basic blogging functionalities such as adding, editing, and deleting posts and comments, as well as up/down voting posts. Built with React and Redux.
 
-Collaborated with @andrewsli
+Collaborated with @cyhk
 
 ## Getting started
 
