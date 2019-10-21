@@ -14,7 +14,7 @@ import reduceReducers from "reduce-reducers";
 import thunk from "redux-thunk";
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import App from "../../components/App";
+import App from "../../Components/App";
 
 const INITIAL_STATE = {
   posts: {},

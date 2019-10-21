@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import App from './Components/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
@@ -25,8 +25,8 @@ const microblogReducer = reduceReducers(INITIAL_STATE, uiReducer, titleReducer, 
 const store = createStore(microblogReducer,
   compose(
     applyMiddleware(thunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__
-    && window.__REDUX_DEVTOOLS_EXTENSION__()
+    // window.__REDUX_DEVTOOLS_EXTENSION__
+    // && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 

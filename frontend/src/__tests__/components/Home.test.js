@@ -1,7 +1,7 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Home from "../../components/Home";
+import Home from "../../Components/Home";
 
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";

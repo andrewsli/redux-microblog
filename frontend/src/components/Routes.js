@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from "./Home";
-import PostForm from "../containers/PostForm";
-import PostDetails from "../containers/PostDetails";
+import PostForm from "../Containers/PostForm";
+import PostDetails from "../Containers/PostDetails";
 import NotFound from "./NotFound";
 
 

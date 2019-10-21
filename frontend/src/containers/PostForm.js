@@ -3,7 +3,7 @@ import { Form, Button } from "reactstrap";
 import { connect } from "react-redux";
 import { addPostFromAPI, editPostFromAPI } from "../actionCreators";
 import "./PostForm.css";
-import FormInput from "../components/FormInput";
+import FormInput from "../Components/FormInput";
 
 /**
  * PostForm: A generic form for adding and editing

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { getTitlesFromAPI, clearErr } from "../actionCreators";
 import "./TitleList.css";
-import Title from "../components/Title";
+import Title from "../Components/Title";
 
 /**
  * TitleList: renders list of titles from redux state
